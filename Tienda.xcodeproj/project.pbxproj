@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		175594E726F8B45400B1F767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175594E526F8B45400B1F767 /* Main.storyboard */; };
 		175594EC26F8B45500B1F767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175594EA26F8B45500B1F767 /* LaunchScreen.storyboard */; };
 		175594F226F8B46E00B1F767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175594CE26F8B43600B1F767 /* Assets.xcassets */; };
+		176E6AF426F9318800EADB06 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 176E6AF326F9318800EADB06 /* Stripe */; };
 		1E1F38DE3D5CD37044F02646 /* Pods_TiendaAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75479150493CF9175C1E750E /* Pods_TiendaAdmin.framework */; };
 		E2996FA27D5ED01793232484 /* Pods_Tienda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0439E81CD13C0070DA8B5B00 /* Pods_Tienda.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2996FA27D5ED01793232484 /* Pods_Tienda.framework in Frameworks */,
+				176E6AF426F9318800EADB06 /* Stripe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +75,6 @@
 				CC3918DB1F687A604BCDE375 /* Pods-TiendaAdmin.debug.xcconfig */,
 				D3A6DD28B0F8524D27BC11E5 /* Pods-TiendaAdmin.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -158,6 +159,9 @@
 			dependencies = (
 			);
 			name = Tienda;
+			packageProductDependencies = (
+				176E6AF326F9318800EADB06 /* Stripe */,
+			);
 			productName = Tienda;
 			productReference = 175594C226F8B43500B1F767 /* Tienda.app */;
 			productType = "com.apple.product-type.application";
@@ -207,6 +211,9 @@
 				Base,
 			);
 			mainGroup = 175594B926F8B43500B1F767;
+			packageReferences = (
+				176E6AF226F9318800EADB06 /* XCRemoteSwiftPackageReference "stripe-ios" */,
+			);
 			productRefGroup = 175594C326F8B43500B1F767 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -602,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		176E6AF226F9318800EADB06 /* XCRemoteSwiftPackageReference "stripe-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 21.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		176E6AF326F9318800EADB06 /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176E6AF226F9318800EADB06 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = Stripe;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 175594BA26F8B43500B1F767 /* Project object */;
 }
