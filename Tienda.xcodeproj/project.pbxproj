@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1744383B26F90FBF006CD839 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1744383A26F90FBF006CD839 /* GoogleService-Info.plist */; };
 		175594C626F8B43500B1F767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175594C526F8B43500B1F767 /* AppDelegate.swift */; };
 		175594CA26F8B43500B1F767 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175594C926F8B43500B1F767 /* ViewController.swift */; };
 		175594CD26F8B43500B1F767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175594CB26F8B43500B1F767 /* Main.storyboard */; };
@@ -17,9 +18,13 @@
 		175594E726F8B45400B1F767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175594E526F8B45400B1F767 /* Main.storyboard */; };
 		175594EC26F8B45500B1F767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175594EA26F8B45500B1F767 /* LaunchScreen.storyboard */; };
 		175594F226F8B46E00B1F767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175594CE26F8B43600B1F767 /* Assets.xcassets */; };
+		1E1F38DE3D5CD37044F02646 /* Pods_TiendaAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75479150493CF9175C1E750E /* Pods_TiendaAdmin.framework */; };
+		E2996FA27D5ED01793232484 /* Pods_Tienda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0439E81CD13C0070DA8B5B00 /* Pods_Tienda.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0439E81CD13C0070DA8B5B00 /* Pods_Tienda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tienda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1744383A26F90FBF006CD839 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		175594C226F8B43500B1F767 /* Tienda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tienda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175594C526F8B43500B1F767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		175594C926F8B43500B1F767 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +38,11 @@
 		175594E626F8B45400B1F767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		175594EB26F8B45500B1F767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		175594ED26F8B45500B1F767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19216ECA7282E35E0220D677 /* Pods-Tienda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tienda.release.xcconfig"; path = "Target Support Files/Pods-Tienda/Pods-Tienda.release.xcconfig"; sourceTree = "<group>"; };
+		75479150493CF9175C1E750E /* Pods_TiendaAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiendaAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0188D3547FD3CA1CEAB1955 /* Pods-Tienda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tienda.debug.xcconfig"; path = "Target Support Files/Pods-Tienda/Pods-Tienda.debug.xcconfig"; sourceTree = "<group>"; };
+		CC3918DB1F687A604BCDE375 /* Pods-TiendaAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendaAdmin.debug.xcconfig"; path = "Target Support Files/Pods-TiendaAdmin/Pods-TiendaAdmin.debug.xcconfig"; sourceTree = "<group>"; };
+		D3A6DD28B0F8524D27BC11E5 /* Pods-TiendaAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendaAdmin.release.xcconfig"; path = "Target Support Files/Pods-TiendaAdmin/Pods-TiendaAdmin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2996FA27D5ED01793232484 /* Pods_Tienda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,12 +58,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1F38DE3D5CD37044F02646 /* Pods_TiendaAdmin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F4294E78ED745EC1432FE6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0188D3547FD3CA1CEAB1955 /* Pods-Tienda.debug.xcconfig */,
+				19216ECA7282E35E0220D677 /* Pods-Tienda.release.xcconfig */,
+				CC3918DB1F687A604BCDE375 /* Pods-TiendaAdmin.debug.xcconfig */,
+				D3A6DD28B0F8524D27BC11E5 /* Pods-TiendaAdmin.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		175594B926F8B43500B1F767 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +84,8 @@
 				175594C426F8B43500B1F767 /* Tienda */,
 				175594DE26F8B45400B1F767 /* TiendaAdmin */,
 				175594C326F8B43500B1F767 /* Products */,
+				0F4294E78ED745EC1432FE6C /* Pods */,
+				DA9E1F0B9FF52D7022639342 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +106,7 @@
 				175594CB26F8B43500B1F767 /* Main.storyboard */,
 				175594D026F8B43600B1F767 /* LaunchScreen.storyboard */,
 				175594D326F8B43600B1F767 /* Info.plist */,
+				1744383A26F90FBF006CD839 /* GoogleService-Info.plist */,
 			);
 			path = Tienda;
 			sourceTree = "<group>";
@@ -104,6 +131,15 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		DA9E1F0B9FF52D7022639342 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0439E81CD13C0070DA8B5B00 /* Pods_Tienda.framework */,
+				75479150493CF9175C1E750E /* Pods_TiendaAdmin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 175594D626F8B43600B1F767 /* Build configuration list for PBXNativeTarget "Tienda" */;
 			buildPhases = (
+				5C9A954F8CD0DFA199868810 /* [CP] Check Pods Manifest.lock */,
 				175594BE26F8B43500B1F767 /* Sources */,
 				175594BF26F8B43500B1F767 /* Frameworks */,
 				175594C026F8B43500B1F767 /* Resources */,
+				7D84A426EC7DE9A3249BFA23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 175594EE26F8B45500B1F767 /* Build configuration list for PBXNativeTarget "TiendaAdmin" */;
 			buildPhases = (
+				D1D685E4233F5FDB169D1BB7 /* [CP] Check Pods Manifest.lock */,
 				175594D926F8B45400B1F767 /* Sources */,
 				175594DA26F8B45400B1F767 /* Frameworks */,
 				175594DB26F8B45400B1F767 /* Resources */,
+				1FD952BAB22B9D0383E806C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				175594D226F8B43600B1F767 /* LaunchScreen.storyboard in Resources */,
+				1744383B26F90FBF006CD839 /* GoogleService-Info.plist in Resources */,
 				175594CF26F8B43600B1F767 /* Assets.xcassets in Resources */,
 				175594CD26F8B43500B1F767 /* Main.storyboard in Resources */,
 			);
@@ -199,6 +240,87 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FD952BAB22B9D0383E806C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TiendaAdmin/Pods-TiendaAdmin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TiendaAdmin/Pods-TiendaAdmin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TiendaAdmin/Pods-TiendaAdmin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C9A954F8CD0DFA199868810 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tienda-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D84A426EC7DE9A3249BFA23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tienda/Pods-Tienda-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tienda/Pods-Tienda-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tienda/Pods-Tienda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1D685E4233F5FDB169D1BB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TiendaAdmin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		175594BE26F8B43500B1F767 /* Sources */ = {
@@ -375,6 +497,7 @@
 		};
 		175594D726F8B43600B1F767 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0188D3547FD3CA1CEAB1955 /* Pods-Tienda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -393,6 +516,7 @@
 		};
 		175594D826F8B43600B1F767 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19216ECA7282E35E0220D677 /* Pods-Tienda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -411,6 +535,7 @@
 		};
 		175594EF26F8B45500B1F767 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC3918DB1F687A604BCDE375 /* Pods-TiendaAdmin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -429,6 +554,7 @@
 		};
 		175594F026F8B45500B1F767 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A6DD28B0F8524D27BC11E5 /* Pods-TiendaAdmin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
