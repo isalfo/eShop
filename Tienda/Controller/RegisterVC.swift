@@ -56,6 +56,8 @@ class RegisterVC: UIViewController {
           let password = passwordTxt.text, password.isNotEmpty,
           let username = usernameTxt.text, username.isNotEmpty else { return }
     
+    activityIndicator.startAnimating()
+    
     Auth.auth().createUser(withEmail: email, password: password, completion: { _, error in
       
       if let error = error {
@@ -67,6 +69,7 @@ class RegisterVC: UIViewController {
       let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
       alert.addAction(action)
       self.present(alert, animated: true, completion: nil)
+      self.activityIndicator.stopAnimating()
       
     })
   }
