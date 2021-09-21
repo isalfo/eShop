@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1744383B26F90FBF006CD839 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1744383A26F90FBF006CD839 /* GoogleService-Info.plist */; };
 		175594C626F8B43500B1F767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175594C526F8B43500B1F767 /* AppDelegate.swift */; };
-		175594CA26F8B43500B1F767 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175594C926F8B43500B1F767 /* ViewController.swift */; };
+		175594CA26F8B43500B1F767 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175594C926F8B43500B1F767 /* HomeVC.swift */; };
 		175594CD26F8B43500B1F767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175594CB26F8B43500B1F767 /* Main.storyboard */; };
 		175594CF26F8B43600B1F767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175594CE26F8B43600B1F767 /* Assets.xcassets */; };
 		175594D226F8B43600B1F767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175594D026F8B43600B1F767 /* LaunchScreen.storyboard */; };
@@ -25,6 +25,10 @@
 		17F27FA026FA0F93007E9C35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F27F9F26FA0F93007E9C35 /* Extensions.swift */; };
 		17F27FA226FA16DD007E9C35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F27FA126FA16DD007E9C35 /* Constants.swift */; };
 		17F27FA526FA1C0F007E9C35 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F27FA426FA1C0F007E9C35 /* RoundedViews.swift */; };
+		17F27FAB26FA5DB6007E9C35 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F27FA926FA5DB6007E9C35 /* ForgotPasswordVC.swift */; };
+		17F27FAC26FA5DB6007E9C35 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F27FAA26FA5DB6007E9C35 /* ForgotPasswordVC.xib */; };
+		17F27FAE26FA7900007E9C35 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F27FAD26FA7900007E9C35 /* Firebase+Utils.swift */; };
+		17F27FAF26FA799F007E9C35 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F27FAD26FA7900007E9C35 /* Firebase+Utils.swift */; };
 		1E1F38DE3D5CD37044F02646 /* Pods_TiendaAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75479150493CF9175C1E750E /* Pods_TiendaAdmin.framework */; };
 		E2996FA27D5ED01793232484 /* Pods_Tienda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0439E81CD13C0070DA8B5B00 /* Pods_Tienda.framework */; };
 /* End PBXBuildFile section */
@@ -34,7 +38,7 @@
 		1744383A26F90FBF006CD839 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		175594C226F8B43500B1F767 /* Tienda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tienda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175594C526F8B43500B1F767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		175594C926F8B43500B1F767 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		175594C926F8B43500B1F767 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		175594CC26F8B43500B1F767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		175594CE26F8B43600B1F767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		175594D126F8B43600B1F767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,9 @@
 		17F27F9F26FA0F93007E9C35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		17F27FA126FA16DD007E9C35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17F27FA426FA1C0F007E9C35 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		17F27FA926FA5DB6007E9C35 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		17F27FAA26FA5DB6007E9C35 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		17F27FAD26FA7900007E9C35 /* Firebase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
 		19216ECA7282E35E0220D677 /* Pods-Tienda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tienda.release.xcconfig"; path = "Target Support Files/Pods-Tienda/Pods-Tienda.release.xcconfig"; sourceTree = "<group>"; };
 		75479150493CF9175C1E750E /* Pods_TiendaAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiendaAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0188D3547FD3CA1CEAB1955 /* Pods-Tienda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tienda.debug.xcconfig"; path = "Target Support Files/Pods-Tienda/Pods-Tienda.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +121,7 @@
 		175594C426F8B43500B1F767 /* Tienda */ = {
 			isa = PBXGroup;
 			children = (
+				17F27FA826FA5D93007E9C35 /* XIBs */,
 				176E6AFA26F942B200EADB06 /* Storyboards */,
 				176E6AF926F942AA00EADB06 /* Controller */,
 				176E6AF826F942A000EADB06 /* View */,
@@ -163,7 +171,7 @@
 		176E6AF926F942AA00EADB06 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				175594C926F8B43500B1F767 /* ViewController.swift */,
+				175594C926F8B43500B1F767 /* HomeVC.swift */,
 				175594C526F8B43500B1F767 /* AppDelegate.swift */,
 				176E6AFD26F9432100EADB06 /* LoginVC.swift */,
 				176E6AFF26F9433C00EADB06 /* RegisterVC.swift */,
@@ -186,6 +194,7 @@
 			children = (
 				17F27F9F26FA0F93007E9C35 /* Extensions.swift */,
 				17F27FA126FA16DD007E9C35 /* Constants.swift */,
+				17F27FAD26FA7900007E9C35 /* Firebase+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -196,6 +205,15 @@
 				17F27FA426FA1C0F007E9C35 /* RoundedViews.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		17F27FA826FA5D93007E9C35 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				17F27FA926FA5DB6007E9C35 /* ForgotPasswordVC.swift */,
+				17F27FAA26FA5DB6007E9C35 /* ForgotPasswordVC.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		DA9E1F0B9FF52D7022639342 /* Frameworks */ = {
@@ -299,6 +317,7 @@
 				176E6AF626F9359B00EADB06 /* LoginStoryboard.storyboard in Resources */,
 				1744383B26F90FBF006CD839 /* GoogleService-Info.plist in Resources */,
 				175594CF26F8B43600B1F767 /* Assets.xcassets in Resources */,
+				17F27FAC26FA5DB6007E9C35 /* ForgotPasswordVC.xib in Resources */,
 				175594CD26F8B43500B1F767 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,12 +420,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F27FAE26FA7900007E9C35 /* Firebase+Utils.swift in Sources */,
 				17F27FA026FA0F93007E9C35 /* Extensions.swift in Sources */,
-				175594CA26F8B43500B1F767 /* ViewController.swift in Sources */,
+				175594CA26F8B43500B1F767 /* HomeVC.swift in Sources */,
 				176E6B0026F9433C00EADB06 /* RegisterVC.swift in Sources */,
 				175594C626F8B43500B1F767 /* AppDelegate.swift in Sources */,
 				17F27FA526FA1C0F007E9C35 /* RoundedViews.swift in Sources */,
 				176E6AFE26F9432100EADB06 /* LoginVC.swift in Sources */,
+				17F27FAB26FA5DB6007E9C35 /* ForgotPasswordVC.swift in Sources */,
 				17F27FA226FA16DD007E9C35 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F27FAF26FA799F007E9C35 /* Firebase+Utils.swift in Sources */,
 				175594E426F8B45400B1F767 /* ViewController.swift in Sources */,
 				175594E026F8B45400B1F767 /* AppDelegate.swift in Sources */,
 			);
