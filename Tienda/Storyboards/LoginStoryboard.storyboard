@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="LoginVC" customModule="Tienda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AEO-AP-dd1">
                                         <rect key="frame" x="0.0" y="80.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-DW-CNN">
                                         <rect key="frame" x="0.0" y="126.5" width="374" height="35"/>
@@ -44,6 +44,9 @@
                                         <state key="normal" title="Forgot password?">
                                             <color key="titleColor" red="0.83529411760000005" green="0.3921568627" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPassword:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aAj-bP-3Tl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmp-mv-blo" customClass="RoundedButton" customModule="Tienda" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="173.5" width="374" height="40"/>
@@ -55,6 +58,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logInButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PZb-Fi-h4X"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oc-0R-0it" customClass="RoundedButton" customModule="Tienda" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="225.5" width="374" height="40"/>
@@ -80,6 +86,9 @@
                                         <state key="normal" title="Continue as guest">
                                             <color key="titleColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="guestButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="d9K-4X-9Yp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -103,6 +112,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sQE-hw-g9U"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="FAW-Ne-HiC" id="lWu-ZZ-sud"/>
+                        <outlet property="emailTxt" destination="Zxf-Dl-52V" id="r9o-fl-lrP"/>
+                        <outlet property="passTxt" destination="AEO-AP-dd1" id="vKY-Jg-ieG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

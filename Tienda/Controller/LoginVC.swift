@@ -6,24 +6,44 @@
 //
 
 import UIKit
-
+import Firebase
+// MARK: LoginVC class
 class LoginVC: UIViewController {
-
-    override func viewDidLoad() {
+  // MARK: - Properties
+  @IBOutlet weak var emailTxt: UITextField!
+  @IBOutlet weak var passTxt: UITextField!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  
+  // MARK: - Lifecycle methods
+  override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  // MARK: - IBAction methods
+  @IBAction func logInButton(_ sender: Any) {
+    guard let email = emailTxt.text, email.isNotEmpty, let pass = passTxt.text, pass.isNotEmpty else {
+      simpleAlert(title: "Ups!", msg: "Please fill out all fields.")
+      return }
+    activityIndicator.startAnimating()
+    Auth.auth().signIn(withEmail: email, password: pass, completion: { authResult, error in
+      if let error = error {
+        Auth.auth().handleFireAuthError(error: error, vc: self)
+        self.activityIndicator.stopAnimating()
+      }
+      if let _ = authResult?.user {
+        self.activityIndicator.stopAnimating()
+        self.dismiss(animated: true, completion: nil)
+      }
+      
+      
+    })
+  }
+  @IBAction func forgotPassword(_ sender: Any) {
+    let vc = ForgotPasswordVC()
+    vc.modalTransitionStyle = .crossDissolve
+    vc.modalPresentationStyle = .overCurrentContext
+    present(vc, animated: true, completion: nil)
+  }
+  @IBAction func guestButton(_ sender: Any) {
+  }
 }
