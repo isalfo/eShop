@@ -13,19 +13,21 @@ class HomeVC: UIViewController {
   @IBOutlet weak var logInOutButton: UIBarButtonItem!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var collectionView: UICollectionView!
+  var selectedCategory: Category?
+  var db: Firestore?
+  var listener: ListenerRegistration?
   
   var categories = [Category]()
   
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    let category = Category(name: "Lizard", id: "lizardID", imageURL: "https://images.unsplash.com/photo-1632251431418-b4e5fe2410b0?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60", isActive: true, timeStamp: Timestamp())
-    categories.append(category)
+    db = Firestore.firestore()
     
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
+    
     if Auth.auth().currentUser == nil {
       Auth.auth().signInAnonymously { result, error in
         if let error = error {
@@ -33,24 +35,90 @@ class HomeVC: UIViewController {
         }
       }
     }
+    
   }
   
   override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(true)
+    setCategoriesListener()
     
     if let user = Auth.auth().currentUser, !user.isAnonymous {
       logInOutButton.title = "Log Out"
     } else {
       logInOutButton.title = "Log In"
     }
-    
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    listener?.remove()
+    categories.removeAll()
+    collectionView.reloadData()
   }
   
   // MARK: - Methods
   fileprivate func presentLoginController() {
-      let storyboard = UIStoryboard(name: Storyboard.LoginStoryboard, bundle: nil)
-      let controller = storyboard.instantiateViewController(withIdentifier: StoryboardID.LoginVC)
-      present(controller, animated: true, completion: nil)
+    let storyboard = UIStoryboard(name: Storyboard.LoginStoryboard, bundle: nil)
+    let controller = storyboard.instantiateViewController(withIdentifier: StoryboardID.LoginVC)
+    present(controller, animated: true, completion: nil)
+  }
+  
+  func setCategoriesListener() {
+    listener = db?.collection("categories").order(by: "timeStamp", descending: true).addSnapshotListener({ snap, error in
+      
+      if let error = error {
+        self.simpleAlert(title: "Error", msg: error.localizedDescription)
+        return
+      }
+      
+      snap?.documentChanges.forEach({ change in
+        
+        let data = change.document.data()
+        let category = Category(data: data)
+        
+        switch change.type {
+        case .added:
+          self.onDocumentAdded(change: change, category: category)
+        case .modified:
+          self.onDocumentModified(change: change, category: category)
+        case .removed:
+          self.onDocumentRemoved(change: change)
+        }
+        
+      })
+      
+    })
+  }
+  
+  func onDocumentAdded(change: DocumentChange, category: Category) {
+    let newIndex = Int(change.newIndex)
+    categories.insert(category, at: newIndex)
+    collectionView.insertItems(at: [IndexPath(item: newIndex, section: 0)])
+  }
+  
+  func onDocumentModified(change: DocumentChange, category: Category) {
+    if change.newIndex == change.oldIndex {
+      let index = Int(change.newIndex)
+      categories[index] = category
+      collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
+    } else {
+      let oldIndex = Int(change.oldIndex)
+      let newIndex = Int(change.newIndex)
+      categories.remove(at: oldIndex)
+      categories.insert(category, at: newIndex)
+      
+      collectionView.moveItem(at: IndexPath(item: oldIndex, section: 0), to: IndexPath(item: newIndex, section: 0))
     }
+    
+  }
+  
+  func onDocumentRemoved(change: DocumentChange) {
+    let oldIndex = Int(change.oldIndex)
+    categories.remove(at: oldIndex)
+    collectionView.deleteItems(at: [IndexPath(item: oldIndex, section: 0)])
+  }
+  
+  
   
   // MARK: - IBAction methods
   @IBAction func logInOutClicked(_ sender: Any) {
@@ -76,6 +144,7 @@ class HomeVC: UIViewController {
   }
 }
 
+// MARK: - CollectionView extensions
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return categories.count
@@ -91,9 +160,54 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let width = view.frame.width
-    let cellWidth = (width - 50) / 2
+    let cellWidth = (width - 30) / 2
     let cellHeight = cellWidth * 1.5
     
     return CGSize(width: cellWidth, height: cellHeight)
   }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    selectedCategory = categories[indexPath.item]
+    performSegue(withIdentifier: Segues.ToProduct, sender: self)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == Segues.ToProduct {
+      if let destination = segue.destination as? ProductsVC {
+        destination.category? = selectedCategory ?? Category(data: ["":""])
+      }
+    }
+  }
 }
+
+/*
+ 
+ Prior fetching functions
+ 
+ func fetchDocument() {
+   let docRef = db?.collection("categories").document("y3BJfc0Vuf87T13DEDSW")
+   
+   listener = docRef?.addSnapshotListener { snap, error in
+     self.categories.removeAll()
+     guard let data = snap?.data() else { return }
+     let newCategory = Category(data: data)
+     self.categories.append(newCategory)
+     self.collectionView.reloadData()
+   }
+ }
+ 
+ func fetchCollection() {
+   let collectionRef = db?.collection("categories")
+   
+   listener = collectionRef?.addSnapshotListener { snap, error in
+     guard let documents = snap?.documents else { return }
+     self.categories.removeAll()
+     for document in documents {
+       let data = document.data()
+       let newCategory = Category(data: data)
+       self.categories.append(newCategory)
+     }
+     self.collectionView.reloadData()
+   }
+ }
+ */
