@@ -1,11 +1,12 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
-
+source 'https://github.com/CocoaPods/Specs.git'
 def shared_pods 
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Functions'
+  pod 'Kingfisher', '~> 7.0'
 end
 
 target 'Tienda' do
