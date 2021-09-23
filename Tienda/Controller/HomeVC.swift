@@ -23,19 +23,9 @@ class HomeVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     db = Firestore.firestore()
-    
-    collectionView.delegate = self
-    collectionView.dataSource = self
-    collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
-    
-    if Auth.auth().currentUser == nil {
-      Auth.auth().signInAnonymously { result, error in
-        if let error = error {
-          Auth.auth().handleFireAuthError(error: error, vc: self)
-        }
-      }
-    }
-    
+    setupCollectionView()
+    setupInitialAnonymusUser()
+    setupNavigationBar()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -57,6 +47,27 @@ class HomeVC: UIViewController {
   }
   
   // MARK: - Methods
+  func setupNavigationBar() {
+    guard let font = UIFont(name: "futura", size: 26) else { return }
+    navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: font]
+  }
+  
+  func setupInitialAnonymusUser() {
+    if Auth.auth().currentUser == nil {
+          Auth.auth().signInAnonymously { result, error in
+            if let error = error {
+              Auth.auth().handleFireAuthError(error: error, vc: self)
+            }
+          }
+        }
+  }
+  
+  func setupCollectionView() {
+        collectionView.delegate = self
+            collectionView.dataSource = self
+            collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
+      }
+  
   fileprivate func presentLoginController() {
     let storyboard = UIStoryboard(name: Storyboard.LoginStoryboard, bundle: nil)
     let controller = storyboard.instantiateViewController(withIdentifier: StoryboardID.LoginVC)
@@ -64,7 +75,7 @@ class HomeVC: UIViewController {
   }
   
   func setCategoriesListener() {
-    listener = db?.collection("categories").order(by: "timeStamp", descending: true).addSnapshotListener({ snap, error in
+    listener = db?.categories.addSnapshotListener({ snap, error in
       
       if let error = error {
         self.simpleAlert(title: "Error", msg: error.localizedDescription)
@@ -174,7 +185,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == Segues.ToProduct {
       if let destination = segue.destination as? ProductsVC {
-        destination.category? = selectedCategory ?? Category(data: ["":""])
+        destination.category = selectedCategory
       }
     }
   }

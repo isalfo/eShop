@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HomeVC-->
+        <!--eShop-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="Tienda" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,12 +50,16 @@
                             <constraint firstItem="QCk-ee-kq5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yRJ-BF-2So"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gm5-Jl-2l4">
+                    <navigationItem key="navigationItem" title="eShop" id="gm5-Jl-2l4">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="Usx-gL-vae">
                             <connections>
                                 <action selector="logInOutClicked:" destination="BYZ-38-t0r" id="hiK-ny-TkY"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="bar_button_cart" id="tJA-pR-67w"/>
+                            <barButtonItem image="bar_button_star" id="7en-S3-T5j"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="QCk-ee-kq5" id="0xH-BF-DuZ"/>
@@ -114,6 +118,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ijf-8k-8Ml">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -126,6 +132,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bar_button_cart" width="27" height="24"/>
+        <image name="bar_button_star" width="26" height="26"/>
         <image name="bg_cat3" width="1500" height="1875"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -43,6 +43,8 @@
 		17F27FB726FA80DF007E9C35 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F27FB426FA80DF007E9C35 /* CategoryCell.swift */; };
 		17F27FB826FA80DF007E9C35 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F27FB526FA80DF007E9C35 /* CategoryCell.xib */; };
 		17F27FB926FA80DF007E9C35 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F27FB526FA80DF007E9C35 /* CategoryCell.xib */; };
+		17FD864226FCD23600EF1A47 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD864026FCD23600EF1A47 /* ProductDetailVC.swift */; };
+		17FD864326FCD23600EF1A47 /* ProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FD864126FCD23600EF1A47 /* ProductDetailVC.xib */; };
 		1E1F38DE3D5CD37044F02646 /* Pods_TiendaAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75479150493CF9175C1E750E /* Pods_TiendaAdmin.framework */; };
 		E2996FA27D5ED01793232484 /* Pods_Tienda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0439E81CD13C0070DA8B5B00 /* Pods_Tienda.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		17F27FB026FA7FE0007E9C35 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		17F27FB426FA80DF007E9C35 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		17F27FB526FA80DF007E9C35 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		17FD864026FCD23600EF1A47 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		17FD864126FCD23600EF1A47 /* ProductDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailVC.xib; sourceTree = "<group>"; };
 		19216ECA7282E35E0220D677 /* Pods-Tienda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tienda.release.xcconfig"; path = "Target Support Files/Pods-Tienda/Pods-Tienda.release.xcconfig"; sourceTree = "<group>"; };
 		75479150493CF9175C1E750E /* Pods_TiendaAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiendaAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0188D3547FD3CA1CEAB1955 /* Pods-Tienda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tienda.debug.xcconfig"; path = "Target Support Files/Pods-Tienda/Pods-Tienda.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 			children = (
 				17F27FA926FA5DB6007E9C35 /* ForgotPasswordVC.swift */,
 				17F27FAA26FA5DB6007E9C35 /* ForgotPasswordVC.xib */,
+				17FD864026FCD23600EF1A47 /* ProductDetailVC.swift */,
+				17FD864126FCD23600EF1A47 /* ProductDetailVC.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				176E6AF626F9359B00EADB06 /* LoginStoryboard.storyboard in Resources */,
 				1744383B26F90FBF006CD839 /* GoogleService-Info.plist in Resources */,
 				175594CF26F8B43600B1F767 /* Assets.xcassets in Resources */,
+				17FD864326FCD23600EF1A47 /* ProductDetailVC.xib in Resources */,
 				17F27FAC26FA5DB6007E9C35 /* ForgotPasswordVC.xib in Resources */,
 				175594CD26F8B43500B1F767 /* Main.storyboard in Resources */,
 			);
@@ -461,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17F27FAE26FA7900007E9C35 /* Firebase+Utils.swift in Sources */,
+				17FD864226FCD23600EF1A47 /* ProductDetailVC.swift in Sources */,
 				17F27FB126FA7FE0007E9C35 /* Category.swift in Sources */,
 				17F27FA026FA0F93007E9C35 /* Extensions.swift in Sources */,
 				175594CA26F8B43500B1F767 /* HomeVC.swift in Sources */,
