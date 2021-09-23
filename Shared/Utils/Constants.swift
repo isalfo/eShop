@@ -34,4 +34,5 @@ struct Identifiers {
 
 struct Segues {
   static let ToProduct = "toProductsVC"
+  static let ToAddEditCategory = "ToAddEditCategory"
 }

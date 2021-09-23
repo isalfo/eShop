@@ -22,16 +22,19 @@ class ProductDetailVC: UIViewController {
     
     productTitle.text = product?.name
     productDescription.text = product?.productDescription
+    if let price = product?.price {
+    productPrice.text = "$\(price)"
+    }
     if let url = URL(string: product?.imageURL ?? "") {
       productImg.kf.setImage(with: url)
     }
     
     // TODO: Change local currency, not working on Argentina
-    let formatter = NumberFormatter()
-    formatter.numberStyle = .currency
-    if let price = formatter.string(from: (product?.price ?? 0) as NSNumber) {
-      productPrice.text = price
-    }
+//    let formatter = NumberFormatter()
+//    formatter.numberStyle = .currency
+//    if let price = formatter.string(from: (product?.price ?? 0) as NSNumber) {
+//      productPrice.text = price
+//    }
     
     let tap = UITapGestureRecognizer(target: self, action: #selector(dismissProd))
     tap.numberOfTapsRequired = 1
