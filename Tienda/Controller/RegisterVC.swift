@@ -20,12 +20,12 @@ class RegisterVC: UIViewController {
   
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
     
     passwordTxt.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
     confirmPassTxt.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
-    }
-    
+  }
+  
   
   // MARK: - IBAction methods
   
@@ -55,8 +55,8 @@ class RegisterVC: UIViewController {
     guard let email = emailTxt.text, email.isNotEmpty,
           let password = passwordTxt.text, password.isNotEmpty,
           let username = usernameTxt.text, username.isNotEmpty else {
-            simpleAlert(title: "Ups!", msg: "Please fill out all fields.")
-            return }
+      simpleAlert(title: "Ups!", msg: "Please fill out all fields.")
+      return }
     
     guard let confirmPass = confirmPassTxt.text, confirmPass == password else {
       simpleAlert(title: "Ups!", msg: "Passwords do not match")
@@ -76,6 +76,11 @@ class RegisterVC: UIViewController {
         return
       }
       
+      guard let firUser = result?.user else { return }
+      let tiendaUser = User(id: firUser.uid, email: email, username: username, stripeId: "")
+      
+      self.createFirestoreUser(user: tiendaUser)
+      
       let alert = UIAlertController(title: "Success", message: "User successfully created", preferredStyle: .alert)
       let action = UIAlertAction(title: "Ok", style: .default, handler: { _ in
         self.dismiss(animated: true, completion: nil)
@@ -85,4 +90,17 @@ class RegisterVC: UIViewController {
       self.activityIndicator.stopAnimating()
     }
   }
+  
+  func createFirestoreUser(user: User) {
+    let newUserRef = Firestore.firestore().collection("users").document(user.id)
+    let data = User.modelToData(user: user)
+    
+    newUserRef.setData(data) { error in
+      if let error = error {
+        self.simpleAlert(title: "Error", msg: error.localizedDescription)
+      }
+    }
+    self.activityIndicator.stopAnimating()
+  }
 }
+
