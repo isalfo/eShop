@@ -6,7 +6,9 @@ def shared_pods
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Functions'
+  pod 'Firebase/Storage'
   pod 'Kingfisher', '~> 7.0'
+  pod 'IQKeyboardManagerSwift'
 end
 
 target 'Tienda' do
