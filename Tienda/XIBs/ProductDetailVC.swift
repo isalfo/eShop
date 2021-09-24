@@ -23,7 +23,7 @@ class ProductDetailVC: UIViewController {
     productTitle.text = product?.name
     productDescription.text = product?.productDescription
     if let price = product?.price {
-    productPrice.text = "$\(price)"
+    productPrice.text = "$\(price)0"
     }
     if let url = URL(string: product?.imageURL ?? "") {
       productImg.kf.setImage(with: url)

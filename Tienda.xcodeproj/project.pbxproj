@@ -30,6 +30,8 @@
 		176E6AF626F9359B00EADB06 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176E6AF526F9359B00EADB06 /* LoginStoryboard.storyboard */; };
 		176E6AFE26F9432100EADB06 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E6AFD26F9432100EADB06 /* LoginVC.swift */; };
 		176E6B0026F9433C00EADB06 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E6AFF26F9433C00EADB06 /* RegisterVC.swift */; };
+		17ED750426FDFF9600005F5D /* AdminProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ED750326FDFF9600005F5D /* AdminProductsVC.swift */; };
+		17ED750626FE047600005F5D /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ED750526FE047600005F5D /* AddEditProductsVC.swift */; };
 		17F27FA026FA0F93007E9C35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F27F9F26FA0F93007E9C35 /* Extensions.swift */; };
 		17F27FA226FA16DD007E9C35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F27FA126FA16DD007E9C35 /* Constants.swift */; };
 		17F27FA526FA1C0F007E9C35 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F27FA426FA1C0F007E9C35 /* RoundedViews.swift */; };
@@ -79,6 +81,8 @@
 		176E6AF526F9359B00EADB06 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		176E6AFD26F9432100EADB06 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		176E6AFF26F9433C00EADB06 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		17ED750326FDFF9600005F5D /* AdminProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductsVC.swift; sourceTree = "<group>"; };
+		17ED750526FE047600005F5D /* AddEditProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductsVC.swift; sourceTree = "<group>"; };
 		17F27F9F26FA0F93007E9C35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		17F27FA126FA16DD007E9C35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17F27FA426FA1C0F007E9C35 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
@@ -270,9 +274,11 @@
 		17FD864D26FCF9AF00EF1A47 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				175594DF26F8B45400B1F767 /* AppDelegate.swift */,
 				175594E326F8B45400B1F767 /* AdminVC.swift */,
+				17ED750326FDFF9600005F5D /* AdminProductsVC.swift */,
 				17FD864B26FCF98D00EF1A47 /* AddEditCategoryVC.swift */,
+				175594DF26F8B45400B1F767 /* AppDelegate.swift */,
+				17ED750526FE047600005F5D /* AddEditProductsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -516,12 +522,14 @@
 				17FD864426FCF2D900EF1A47 /* HomeVC.swift in Sources */,
 				175594E026F8B45400B1F767 /* AppDelegate.swift in Sources */,
 				17F27FB226FA7FE0007E9C35 /* Category.swift in Sources */,
+				17ED750426FDFF9600005F5D /* AdminProductsVC.swift in Sources */,
 				1723030526FB60A300235F49 /* ProductCell.swift in Sources */,
 				17FD864C26FCF98D00EF1A47 /* AddEditCategoryVC.swift in Sources */,
 				17F27FB726FA80DF007E9C35 /* CategoryCell.swift in Sources */,
 				17FD864626FCF43400EF1A47 /* Extensions.swift in Sources */,
 				1723030126FB5ECF00235F49 /* Product.swift in Sources */,
 				17FD864826FCF4B600EF1A47 /* ProductDetailVC.swift in Sources */,
+				17ED750626FE047600005F5D /* AddEditProductsVC.swift in Sources */,
 				17FD864726FCF43700EF1A47 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

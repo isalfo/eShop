@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductCell: UITableViewCell {
 
@@ -19,9 +20,13 @@ class ProductCell: UITableViewCell {
   
   func configureCell(product: Product) {
     productTitle.text = product.name
+    productPrice.text = "$\(String(product.price))0"
     
     if let url = URL(string: product.imageURL) {
-      productImg.kf.setImage(with: url)
+      let placeholder = UIImage(named: "placeholder")
+      let options: KingfisherOptionsInfo = [KingfisherOptionsInfoItem.transition(.fade(0.5))]
+      productImg.kf.indicatorType = .activity
+      productImg.kf.setImage(with: url, placeholder: placeholder, options: options)
     }
   }
   
