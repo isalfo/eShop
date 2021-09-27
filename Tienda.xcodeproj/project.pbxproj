@@ -26,6 +26,8 @@
 		175594E726F8B45400B1F767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175594E526F8B45400B1F767 /* Main.storyboard */; };
 		175594EC26F8B45500B1F767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175594EA26F8B45500B1F767 /* LaunchScreen.storyboard */; };
 		175594F226F8B46E00B1F767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175594CE26F8B43600B1F767 /* Assets.xcassets */; };
+		176AED7526FE706C00644F99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AED7426FE706C00644F99 /* User.swift */; };
+		176AED7626FE706C00644F99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AED7426FE706C00644F99 /* User.swift */; };
 		176E6AF426F9318800EADB06 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 176E6AF326F9318800EADB06 /* Stripe */; };
 		176E6AF626F9359B00EADB06 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176E6AF526F9359B00EADB06 /* LoginStoryboard.storyboard */; };
 		176E6AFE26F9432100EADB06 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E6AFD26F9432100EADB06 /* LoginVC.swift */; };
@@ -78,6 +80,7 @@
 		175594E626F8B45400B1F767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		175594EB26F8B45500B1F767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		175594ED26F8B45500B1F767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		176AED7426FE706C00644F99 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		176E6AF526F9359B00EADB06 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		176E6AFD26F9432100EADB06 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		176E6AFF26F9433C00EADB06 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
@@ -198,6 +201,7 @@
 			children = (
 				17F27FB026FA7FE0007E9C35 /* Category.swift */,
 				172302FF26FB5ECF00235F49 /* Product.swift */,
+				176AED7426FE706C00644F99 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -497,6 +501,7 @@
 				17FD864226FCD23600EF1A47 /* ProductDetailVC.swift in Sources */,
 				17F27FB126FA7FE0007E9C35 /* Category.swift in Sources */,
 				17F27FA026FA0F93007E9C35 /* Extensions.swift in Sources */,
+				176AED7526FE706C00644F99 /* User.swift in Sources */,
 				175594CA26F8B43500B1F767 /* HomeVC.swift in Sources */,
 				176E6B0026F9433C00EADB06 /* RegisterVC.swift in Sources */,
 				1723030426FB60A300235F49 /* ProductCell.swift in Sources */,
@@ -522,6 +527,7 @@
 				17FD864426FCF2D900EF1A47 /* HomeVC.swift in Sources */,
 				175594E026F8B45400B1F767 /* AppDelegate.swift in Sources */,
 				17F27FB226FA7FE0007E9C35 /* Category.swift in Sources */,
+				176AED7626FE706C00644F99 /* User.swift in Sources */,
 				17ED750426FDFF9600005F5D /* AdminProductsVC.swift in Sources */,
 				1723030526FB60A300235F49 /* ProductCell.swift in Sources */,
 				17FD864C26FCF98D00EF1A47 /* AddEditCategoryVC.swift in Sources */,

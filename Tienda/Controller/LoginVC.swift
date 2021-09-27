@@ -16,9 +16,9 @@ class LoginVC: UIViewController {
   
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
+    super.viewDidLoad()
+  }
+  
   // MARK: - IBAction methods
   @IBAction func logInButton(_ sender: Any) {
     guard let email = emailTxt.text, email.isNotEmpty, let pass = passTxt.text, pass.isNotEmpty else {
