@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LoginVC-->
+        <!--eShop-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="LoginVC" customModule="Tienda" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmp-mv-blo" customClass="RoundedButton" customModule="Tienda" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="173.5" width="374" height="40"/>
-                                        <color key="backgroundColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ADw-FD-Qny"/>
                                         </constraints>
@@ -64,7 +64,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oc-0R-0it" customClass="RoundedButton" customModule="Tienda" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="225.5" width="374" height="40"/>
-                                        <color key="backgroundColor" red="0.83529411760000005" green="0.3921568627" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="gYO-5R-ANo"/>
                                         </constraints>
@@ -78,7 +78,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vw-Lc-VnN" customClass="RoundedButton" customModule="Tienda" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="277.5" width="374" height="40"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="TQI-YE-aoj"/>
                                         </constraints>
@@ -111,7 +111,7 @@
                             <constraint firstItem="FAW-Ne-HiC" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ykH-KR-7gW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sQE-hw-g9U"/>
+                    <navigationItem key="navigationItem" title="eShop" id="sQE-hw-g9U"/>
                     <connections>
                         <outlet property="activityIndicator" destination="FAW-Ne-HiC" id="lWu-ZZ-sud"/>
                         <outlet property="emailTxt" destination="Zxf-Dl-52V" id="r9o-fl-lrP"/>
@@ -122,7 +122,7 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="114.50892857142857"/>
         </scene>
-        <!--RegisterVC-->
+        <!--eShop-->
         <scene sceneID="AIv-PX-zcl">
             <objects>
                 <viewController id="tiK-PP-I5s" customClass="RegisterVC" customModule="Tienda" customModuleProvider="target" sceneMemberID="viewController">
@@ -164,7 +164,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LV0-0U-1rL" customClass="RoundedButton" customModule="Tienda" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="218.5" width="374" height="35"/>
-                                        <color key="backgroundColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -212,7 +212,7 @@
                             <constraint firstItem="syY-Qw-ggx" firstAttribute="centerY" secondItem="Qbx-aT-PTh" secondAttribute="centerY" id="pTf-zS-tAc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="m3o-WS-gdg"/>
+                    <navigationItem key="navigationItem" title="eShop" id="m3o-WS-gdg"/>
                     <connections>
                         <outlet property="activityIndicator" destination="scV-Lg-exd" id="oJ8-Cq-VTg"/>
                         <outlet property="confirmPassCheckImg" destination="syY-Qw-ggx" id="Zu9-J7-89W"/>
@@ -235,7 +235,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d8e-IZ-4VF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.83529411760000005" green="0.3921568627" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
